@@ -22,15 +22,20 @@ M.block_simple_clock = {
         this.updateTime();
     },
 
-    getTimeCodedString: function () {
+    getTimeCodedString: function (clockTime) {
         // FIXME: get proper decoding here
-        // testing
-        return '---';
-    }
+        var week = '' + (clockTime.getDay() + 1);
+        var slot = 'CD';
+        var label;
+
+        label = week + slot
+        return label;
+    },
 
     updateTime: function () {
         var serverTime;
         var youTime;
+        var pucTime;
 
         // Update the server clock if shown
         if(this.serverClockShown) {
@@ -48,8 +53,8 @@ M.block_simple_clock = {
 
         // Update the PUC clock if shown
         if(this.pucClockShown) {
-            youTime = new Date();
-            document.getElementById('block_progress_pucTime').value = '---';
+            pucTime = new Date();
+            document.getElementById('block_progress_pucTime').value = this.getTimeCodedString(pucTime);
         }
 
         // Refresh clock display in 1 second
@@ -105,7 +110,7 @@ M.block_simple_clock = {
             clockString += M.str.block_simple_clock.after_noon;
         }
 
-        clockString += '-';
+        //clockString += '-';
         return clockString;
     }
 };
