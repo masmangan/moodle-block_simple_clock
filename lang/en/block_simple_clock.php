@@ -67,6 +67,12 @@ involve a delay, but the delay will be more evident with seconds shown.</p>
 $string['config_show_both_clocks'] = 'Show clocks for both server and user';
 $string['config_show_server_clock'] = 'Show clock for server only';
 $string['config_show_user_clock'] = 'Show clock for user only';
+$string['config_show_puc_clock'] = 'Show PUC clock';
+$string['config_show_puc_clock_help'] = '
+<p>This setting allows you to select whether to show or hide the PUC clock.</p>
+<p>Note that the PUC clock always use the system server time.</p>
+';
+
 $string['config_title'] = 'Alternate title';
 $string['config_title_help'] = '
 <p>This setting allows the block title to be changed.</p>
@@ -83,3 +89,5 @@ $string['server'] = 'Server';
 $string['simple_clock:myaddinstance'] = 'Add a new Simple Clock block to the My Moodle page';
 $string['simple_clock:addinstance'] = 'Add a new Simple Clock block';
 $string['you'] = 'You';
+$string['puc'] = 'PUC';
+

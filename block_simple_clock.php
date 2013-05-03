@@ -125,6 +125,7 @@ class block_simple_clock extends block_base {
         $showicons = !isset($this->config->show_icons) || $this->config->show_icons==1;
         $showseconds = isset($this->config->show_seconds) && $this->config->show_seconds==1;
         $showday = isset($this->config->show_day) && $this->config->show_day==1;
+        $showpucclock = isset($this->config->show_puc_clock) && $this->config->show_puc_clock==1;
 
         // Start the content, which is primarily a table
         $this->content = new stdClass;
@@ -140,7 +141,8 @@ class block_simple_clock extends block_base {
                     $servericon = $OUTPUT->pix_icon('server', $alt, 'block_simple_clock');
                 }
                 else {
-                    $servericon = $OUTPUT->pix_icon('favicon', $alt, 'theme');
+                    //$servericon = $OUTPUT->pix_icon('favicon', $alt, 'theme');
+                    $servericon = $OUTPUT->pix_icon('server', $alt, 'block_simple_clock');
                 }
                 $row[] = $servericon;
             }
@@ -174,6 +176,28 @@ class block_simple_clock extends block_base {
             $row[] = HTML_WRITER::empty_tag('input', $attributes);
             $table->data[] = $row;
         }
+
+        // Last item is the PUC clock
+        /**/
+        if ($showpucclock) {
+            $row = array();
+            if ($showicons) {
+                $alt = get_string('server', 'block_simple_clock');
+                $servericon = $OUTPUT->pix_icon('server', $alt, 'block_simple_clock');
+                $row[] = $servericon;
+            }
+            else {
+                $row[] = '';
+            }
+            $row[] = get_string('puc', 'block_simple_clock').':';
+            $attributes = array();
+            $attributes['class'] = 'clock';
+            $attributes['id'] = 'block_progress_pucTime';
+            $attributes['value'] = get_string('loading', 'block_simple_clock');
+            $row[] = HTML_WRITER::empty_tag('input', $attributes);
+            $table->data[] = $row;
+        }
+        /**/
         $this->content->text .= HTML_WRITER::table($table);
 
         // Set up JavaScript
@@ -195,6 +219,7 @@ class block_simple_clock extends block_base {
         $arguments = array(
             $showserverclock,
             $showuserclock,
+            $showpucclock,
             $showseconds,
             $showday,
             $timearray['tm_year']+1900,

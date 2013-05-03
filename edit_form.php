@@ -55,6 +55,12 @@ class block_simple_clock_edit_form extends block_edit_form {
         $mform->addHelpButton('config_show_clocks', 'config_clock_visibility',
                               'block_simple_clock');
 
+        // Control visibility of PUC clock
+        $mform->addElement('selectyesno', 'config_show_puc_clock',
+            get_string('config_show_puc_clock', 'block_simple_clock'));
+        $mform->setDefault('config_show_puc_clock', 0);
+        $mform->addHelpButton('config_show_puc_clock', 'config_show_puc_clock', 'block_simple_clock');
+
         // Control visibility of day names
         $mform->addElement('selectyesno', 'config_show_day',
                            get_string('config_day', 'block_simple_clock'));

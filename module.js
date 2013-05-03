@@ -1,11 +1,12 @@
 M.block_simple_clock = {
     serverClockShown: true,
     userClockShown: true,
+    pucClockShown: true,
     showSeconds: false,
     showDay: false,
     timeDifference: 0,
 
-    initSimpleClock: function (YUIObject, server, user, seconds, day, y,mo,d,h,m,s) {
+    initSimpleClock: function (YUIObject, server, user, puc, seconds, day, y,mo,d,h,m,s) {
         var serverTimeStart = new Date(y,mo,d,h,m,s);
         var currentTime = new Date();
 
@@ -13,6 +14,7 @@ M.block_simple_clock = {
         this.timeDifference = currentTime.getTime() - serverTimeStart.getTime();
         this.serverClockShown = server;
         this.userClockShown = user;
+        this.pucClockShown = puc;
         this.showSeconds = seconds;
         this.showDay = day;
 
@@ -35,6 +37,12 @@ M.block_simple_clock = {
         if(this.userClockShown) {
             youTime = new Date();
             document.getElementById('block_progress_youTime').value = this.getClockString(youTime);
+        }
+
+        // Update the PUC clock if shown
+        if(this.pucClockShown) {
+            youTime = new Date();
+            document.getElementById('block_progress_pucTime').value = '---';
         }
 
         // Refresh clock display in 1 second
@@ -90,6 +98,7 @@ M.block_simple_clock = {
             clockString += M.str.block_simple_clock.after_noon;
         }
 
+        clockString += '-';
         return clockString;
     }
 };
