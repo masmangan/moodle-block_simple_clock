@@ -36,14 +36,14 @@ M.block_simple_clock = {
         if(this.serverClockShown) {
             serverTime = new Date();
             serverTime.setTime(serverTime.getTime() - this.timeDifference);
-            document.getElementById('block_progress_serverTime').value = this.getClockString(serverTime) + getTimeCodedString();
+            document.getElementById('block_progress_serverTime').value = this.getClockString(serverTime);
 
         }
 
         // Update the user clock if shown
         if(this.userClockShown) {
             youTime = new Date(); 
-            document.getElementById('block_progress_youTime').value = this.getClockString(youTime) + getTimeCodedString();
+            document.getElementById('block_progress_youTime').value = this.getClockString(youTime) ;
         }
 
         // Update the PUC clock if shown
