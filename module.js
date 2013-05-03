@@ -22,6 +22,12 @@ M.block_simple_clock = {
         this.updateTime();
     },
 
+    getTimeCodedString: function () {
+        // FIXME: get proper decoding here
+        // testing
+        return '---';
+    }
+
     updateTime: function () {
         var serverTime;
         var youTime;
@@ -30,13 +36,14 @@ M.block_simple_clock = {
         if(this.serverClockShown) {
             serverTime = new Date();
             serverTime.setTime(serverTime.getTime() - this.timeDifference);
-            document.getElementById('block_progress_serverTime').value = this.getClockString(serverTime);
+            document.getElementById('block_progress_serverTime').value = this.getClockString(serverTime) + getTimeCodedString();
+
         }
 
         // Update the user clock if shown
         if(this.userClockShown) {
-            youTime = new Date();
-            document.getElementById('block_progress_youTime').value = this.getClockString(youTime);
+            youTime = new Date(); 
+            document.getElementById('block_progress_youTime').value = this.getClockString(youTime) + getTimeCodedString();
         }
 
         // Update the PUC clock if shown
