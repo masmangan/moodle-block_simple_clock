@@ -23,7 +23,6 @@ M.block_simple_clock = {
     },
 
     getTimeCodedString: function (clockTime) {
-        // FIXME: get proper decoding here
         var week = '' + (clockTime.getDay() + 1);
         var hm = clockTime.getHours() * 100 + clockTime.getMinutes();
         var slot = '--';
@@ -36,25 +35,25 @@ M.block_simple_clock = {
         if (hm >= 800 && hm <= 940) { // no letter before 8am
             slot = 'AB';
         } 
-        else if (hm >= 950 && hm <= 1130) { // no letter before 8am
+        else if (hm >= 950 && hm <= 1130) { 
             slot = 'CD';
         }
-        else if (hm >= 1135 && hm <= 1225) { // no letter before 8am
+        else if (hm >= 1135 && hm <= 1225) { 
             slot = 'E-';
         }
-       else if (hm >= 1400 && hm <= 1540) { // no letter before 8am
+       else if (hm >= 1400 && hm <= 1540) { 
             slot = 'FG';
         }
-        else if (hm >= 1550 && hm <= 1730) { // no letter before 8am
+        else if (hm >= 1550 && hm <= 1730) { 
             slot = 'HI';
         }
-        else if (hm >= 1735 && hm <= 1910) { // no letter before 8am
+        else if (hm >= 1735 && hm <= 1910) { 
             slot = 'JK';
         }
-        else if (hm >= 1930 && hm <= 2015) { // no letter before 8am
+        else if (hm >= 1930 && hm <= 2100) { 
             slot = 'LM';
         }
-        else if (hm >= 2115 && hm <= 2245) { // no letter before 8am
+        else if (hm >= 2115 && hm <= 2245) { // no letter after 10:45pm
             slot = 'NP';
         }
                                             
