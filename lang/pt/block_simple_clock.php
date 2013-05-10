@@ -48,12 +48,12 @@ While this setting set to No, students will not see the header, regardless of wh
 ';
 $string['config_icons'] = 'Mostrar ícones';
 $string['config_icons_help'] = '
-<p>With this setting, you can control whether icons are shown next to each clock label.</p>
+<p>Esta configuração determina se as ícones são apresentadas ao lado de cada relógio.</p>
 <p>The site icon is shown next to the "server" label. The user\'s icon image is shown next to their clock.</p>
 ';
-$string['config_day'] = 'Mostrar o dia';
+$string['config_day'] = 'Mostrar a data';
 $string['config_day_help'] = '
-<p>Showing the day name adds additional information for students who may be in a timezone a day earlier or later.</p>
+<p>Mostrar a data oferece informação útil para estudantes em zonas horárias diferentes da do servidor.</p>
 ';
 $string['config_seconds'] = 'Mostrar segundos';
 $string['config_seconds_help'] = '
@@ -67,6 +67,13 @@ involve a delay, but the delay will be more evident with seconds shown.</p>
 $string['config_show_both_clocks'] = 'Mostrar ambos relógios (servidor e local)';
 $string['config_show_server_clock'] = 'Mostrar apenas o relógio do servidor';
 $string['config_show_user_clock'] = 'Mostrar apenas o relógio local';
+$string['config_show_puc_clock'] = 'Mostrar relógio da PUCRS';
+$string['config_show_puc_clock_help'] = '
+<p>Esta configuração determina se o relógio da PUCRS é apresentado.</p>
+<p>O relógio da PUCRS está sincronizado com o horário do servidor.</p>
+';
+
+
 $string['config_title'] = 'Novo título';
 $string['config_title_help'] = '
 <p>This setting allows the block title to be changed.</p>
@@ -83,3 +90,4 @@ $string['server'] = 'Servidor';
 $string['simple_clock:myaddinstance'] = 'Insira um novo bloco Simple Clock block na página My Moodle';
 $string['simple_clock:addinstance'] = 'Insira um novo bloco Simple Clock';
 $string['you'] = 'Local';
+$string['puc'] = 'PUCRS';
