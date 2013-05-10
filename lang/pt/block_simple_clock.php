@@ -30,8 +30,8 @@ $string['before_noon'] = 'am';
 $string['clock_separator'] = ':';
 
 // Config strings and help
-$string['clock_title_default'] = 'Relógio';
-$string['config_clock_visibility'] = 'Visibilidade dos relógios';
+$string['clock_title_default'] = 'Relógio da PUCRS';
+$string['config_clock_visibility'] = 'Mostrar relógios';
 $string['config_clock_visibility_help'] = '<p>Define os relógios apresentados:</p>
 <ul>
     <li>horário do servidor,</li>
@@ -40,18 +40,17 @@ $string['config_clock_visibility_help'] = '<p>Define os relógios apresentados:<
 </ul>';
 $string['config_header'] = 'Mostrar cabeçalho';
 $string['config_header_help'] = '
-<p>Determina se o cabeçalho do bloco, incluindo o título, é apresentado.</p>
+<p>Define se o cabeçalho do bloco, incluindo o título, é apresentado.</p>
 <p style="background:yellow;border:3px dashed black;padding:10px;"><strong>Observação</strong><br />
-Durante a edição, o cabeçalho é apresentado para professores e administradores. block will be shown to teachers/administrators.
-When "Editing" is turned off, the header will be hidden.
-While this setting set to No, students will not see the header, regardless of whether "Editing" is on or off.</p>
+No modo de edição, o cabeçalho é apresentado para professores e administradores.
+O cabeçalho não é apresentado aos estudantes, quando desabilitado, independente do modo de edição.</p>
 ';
 $string['config_icons'] = 'Mostrar ícones';
 $string['config_icons_help'] = '
 <p>Determina se as ícones são apresentadas ao lado de cada relógio.</p>
-<p>The site icon is shown next to the "server" label. The user\'s icon image is shown next to their clock.</p>
+<p>A ícone do servidor é apresentada ao lado relógio do servidor. A ícone do usuário é apresentada ao lado do seu relógio.</p>
 ';
-$string['config_day'] = 'Mostrar a data';
+$string['config_day'] = 'Mostrar data';
 $string['config_day_help'] = '
 <p>Apresenta informação útil para estudantes em zonas horárias diferentes da do servidor.</p>
 ';
@@ -74,7 +73,7 @@ $string['config_show_puc_clock_help'] = '
 ';
 
 
-$string['config_title'] = 'Novo título';
+$string['config_title'] = 'Alterar título';
 $string['config_title_help'] = '
 <p>Permite a alteração do título do bloco.</p>
 <p>Se não houver um novo título, o título original é apresentado.</p>
@@ -87,7 +86,7 @@ $string['javascript_disabled'] = 'Habilite o uso de JavaScript no seu navegador 
 $string['loading'] = 'Aguarde...';
 $string['pluginname'] = 'Relógio';
 $string['server'] = 'Servidor';
-$string['simple_clock:myaddinstance'] = 'Insira um novo bloco Simple Clock na página My Moodle';
-$string['simple_clock:addinstance'] = 'Insira um novo bloco Simple Clock';
+$string['simple_clock:myaddinstance'] = 'Insira um novo bloco Relógio da PUCRS na página My Moodle';
+$string['simple_clock:addinstance'] = 'Insira um novo bloco Relógio da PUCRS';
 $string['you'] = 'Local';
 $string['puc'] = 'PUCRS';
